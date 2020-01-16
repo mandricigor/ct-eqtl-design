@@ -19,7 +19,7 @@
 <table id="inputTable">
 	<tr>
 		<td colspan="2">
-			<p><div id="buttonPreset1"></div> We aim to have a cell-type specific eQTL study (ct-eQTL) for B cells with available budget $35,000. As the optimal coverage is 10,000 reads per cell (<a href="https://www.biorxiv.org/content/10.1101/766972v1">(Mandric et al, 2019)</a>), what is the sample size and the number of cells we should have per individual? And what will be the effective sample size?</p>
+			<p><div id="buttonPreset1"></div> We aim to have a cell-type specific eQTL study (ct-eQTL) for B cells with available budget $35,000. As the optimal coverage is 10,000 reads per cell (<a href="https://www.biorxiv.org/content/10.1101/766972v1">Mandric et al, 2019</a>), what is the sample size and the number of cells we should have per individual? And what will be the effective sample size?</p>
 		</td>
 	</tr>
 	<tr valign="bottom">
