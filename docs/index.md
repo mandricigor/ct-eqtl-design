@@ -73,10 +73,11 @@
   			<li>The cost of sequencing is $5 per million reads</li>
 </ul> 
 </p>
-</div>
-<div>
+<p>
 	This calculator was developed by Igor Mandric (UCLA) and Christoph Hafemeister (NYU)
+</p>
 </div>
+
 
 <script>
 // min, max, step, default
