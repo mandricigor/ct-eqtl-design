@@ -1,0 +1,21 @@
+theme: jekyll-theme-architect
+
+# Name of website
+title: Optimal design of cell-type specific eQTL studies
+
+description: Calculator
+
+  
+author:
+  name: Igor Mandric
+  
+social-network-links:
+  rss: true
+  email: "imandric@ucla.edu"
+  github: mandric.igor
+  twitter: imandric1
+  
+share-links-active:
+  twitter: true
+  facebook: true
+  linkedin: true
