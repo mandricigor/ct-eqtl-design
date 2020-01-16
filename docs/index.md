@@ -74,6 +74,9 @@
 </ul> 
 </p>
 </div>
+<div>
+	This calculator was developed by Igor Mandric (UCLA) and Christoph Hafemeister (NYU)
+</div>
 
 <script>
 // min, max, step, default
