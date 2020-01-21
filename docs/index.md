@@ -76,7 +76,7 @@
 </ul> 
 </p>
 <p>
-How to interpret the output of the calculator?  
+	<h3>How to interpret the output of the calculator?</h3>
     <ul>
         <li>The area of best experimental designs is marked with a blue dashed line</li>
         <li>The Optimal Effective Sample Size is the same for all the experimental designs inside the marked area</li>
