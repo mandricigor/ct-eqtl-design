@@ -63,6 +63,7 @@
 <td colspan="2">
 <div id="description" style="width:689px;position:absolute;">
 <p>
+	<br>
 		This calculator provides guidance in selecting optimal experimental designs for cell-type specific eQTL analysis (ct-eQTL). It is based on the results of the paper "Optimal design of single-cell RNA sequencing experiments for cell-type specific eQTL analysis" <a href="https://www.biorxiv.org/content/10.1101/766972v1">(Mandric et al, 2019)</a>. As it is shown in their paper, the optimal coverage at which one should conduct cell-type specific eQTL studies is 10,000 (±2,500) reads per cell. The assumptions underlying this calculator are the following:
 <ul>
   			<li>Genetic multiplexing is used (At most 16 samples per pool, at most 24,000 cells per pool) </li>
