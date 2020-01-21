@@ -37,7 +37,7 @@
 		</td>
 		<td>
 			Budget ($1,000)
-			<div id="sliderBudget" style="width:250px;"></div><input type="text" id="inpBudget" value="15" />
+			<div id="sliderBudget" style="width:250px;"></div><input type="text" id="inpBudget" value="55" />
 		</td>
 	</tr>
 </table>
@@ -66,13 +66,26 @@
 	<br>
 		This calculator provides guidance in selecting optimal experimental designs for cell-type specific eQTL analysis (ct-eQTL). It is based on the results of the paper "Optimal design of single-cell RNA sequencing experiments for cell-type specific eQTL analysis" <a href="https://www.biorxiv.org/content/10.1101/766972v1">(Mandric et al, 2019)</a>. As it is shown in their paper, the optimal coverage at which one should conduct cell-type specific eQTL studies is 10,000 (±2,500) reads per cell. The assumptions underlying this calculator are the following:
 <ul>
-  			<li>Genetic multiplexing is used (At most 16 samples per pool, at most 24,000 cells per pool) </li>
+  			<li>Genetic multiplexing is used</li>
+                            <ul>
+                                <li>At most 16 samples per pool</li>
+                                <li>At most 24,000 cells per pool</li>
+                            </ul>
   			<li>The cost of library prep is $2,000 per reaction</li>
   			<li>The cost of sequencing is $5 per million reads</li>
 </ul> 
 </p>
 <p>
-	This calculator was developed by Igor Mandric (UCLA) and Christoph Hafemeister (NYU).
+How to interpret the output of the calculator?  
+    <ul>
+        <li>The area of best experimental designs is marked with a blue dashed line</li>
+        <li>The Optimal Effective Sample Size is the same for all the experimental designs inside the marked area</li>
+        <li>The blue dots show some particular experimental designs. Hover the mouse upon them to see the number of pools and number of reads per cell</li>
+        <li>The number of cells stands for <i>desired</i> number of cells</li>
+    </ul>
+</p>
+<p>
+	This calculator was developed by Igor Mandric (UCLA) and Christoph Hafemeister (NYGC).
 </p>
 </div>
 
@@ -80,7 +93,7 @@
 <script>
 // min, max, step, default
 //var sampleSizeRange = [10, 1000, 1, 60];
-var budgetRange = [10, 100, 1, 15];
+var budgetRange = [10, 100, 1, 55];
 
 var slopes = {"CD14+ Monocytes": 1.556, "CD4 T cells": 1.549, "B cells": 1.197, "CD8 T cells": 1.196, "NK cells": 1.239, "Megakaryocytes": 1.273, "FCGR3A+ cells": 1.304, "Dendritic cells": 1.180};
 var intercepts = {"CD14+ Monocytes": 4.846, "CD4 T cells": 5.074, "B cells": 4.645, "CD8 T cells": 1.623, "NK cells": 2.763, "Megakaryocytes": 1.103, "FCGR3A+ cells": 3.614, "Dendritic cells": 2.875};
@@ -329,6 +342,8 @@ function exp_design_fixed_lane_capacity(budget, lo_cell, hi_cell, lo_p, hi_p, di
                     info.push([w, cn, singlets_pic, nonident_multi_pic, singlets_reads, multiplets_reads]);
                 }
             }
+            //console.log(batch_ind_info); console.log("VAFLI");
+            //console.log(info); console.log("SUKASUKA");
             if (info.length == batch_ind_info.length) {
                 // group by batch cell count
                 info_singlet_reads_dict = {};
@@ -338,11 +353,15 @@ function exp_design_fixed_lane_capacity(budget, lo_cell, hi_cell, lo_p, hi_p, di
                 //for entry in info:
                 for (i = 0; i < info.length; i ++) {
                     entry = info[i];
+                    //console.log(entry);
+                    //console.log("ENTRY");
                     info_singlets_pic_dict[entry[2]] = getget(info_singlets_pic_dict, entry[2]) + entry[0];
                     info_nonident_multi_pic_dict[entry[3]] = getget(info_nonident_multi_pic_dict, entry[3]) + entry[0];
                     info_singlet_reads_dict[entry[4]] = getget(info_singlet_reads_dict, entry[4]) + entry[0];
                     info_multiplet_reads_dict[entry[5]] = getget(info_multiplet_reads_dict,entry[5]) + entry[0];
                 }
+                //console.log(info_singlets_pic_dict);
+                //console.log(info_singlet_reads_dict);
                 singlets_pic = 0;
                 singlets_pic_sum = 0;
                 for (const u in info_singlets_pic_dict) {
@@ -379,7 +398,7 @@ function exp_design_fixed_lane_capacity(budget, lo_cell, hi_cell, lo_p, hi_p, di
                 }
                 multiplets_reads /= parseFloat(multiplets_reads_sum);
                 multiplets_reads = parseInt(multiplets_reads);
-                reads_pp.push([cn, singlets_pic, nonident_multi_pic, singlets_reads, multiplets_reads]);
+                reads_pp.push([cn, singlets_pic, nonident_multi_pic, singlets_reads, multiplets_reads, info.length]);
             }
             cn -= diff_cell;
             if (reads_pp) {
@@ -398,27 +417,112 @@ function optimal_designs(budget) {
     var lowInd = 10;
     var highInd = 1000;
     var uu = exp_design_fixed_lane_capacity(budget, lowCell, highCell, lowInd, highInd);
+    //console.log(uu);
+    //console.log("vasea");
     good_ind = {};
+    best_designs = [];
     for (const u in uu) {
+        good_ind[u] = [];
         var uarr = uu[u];
         var i;
         for (i = 0; i < uarr.length; i ++) {
             if ((uarr[i][3] > 7500) && (uarr[i][3] < 12500)) {
-                //console.log(u, uarr[i][0]);
-                if (u in good_ind) {
-                    if (uarr[i][0] > good_ind[i]) {
-                        good_ind[i] = uarr[i][0];
-                    }
-                }
-                else {
-                    good_ind[u] = uarr[i][0];
-                }
+                console.log(u, uarr[i]);
+                //if (u in good_ind) {
+                //    if (uarr[i][0] > good_ind[i]) {
+                //        good_ind[i] = [uarr[i][0], uarr[i][5], Math.round( (uarr[i][3] / 1000) * 10 ) / 10];
+                //    }
+                //}
+                //else {
+                    best_designs.push([parseInt(u), uarr[i][0], uarr[i][5], Math.round( (uarr[i][3] / 1000) * 10 ) / 10]);
+                //}
             }
         }
     }
-    console.log(good_ind);
-    return good_ind;
+    //console.log(good_ind);
+    return best_designs;
+    //return good_ind;
 }
+
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+}
+
+
+var convexhull = new function() {
+	
+	// Returns a new array of points representing the convex hull of
+	// the given set of points. The convex hull excludes collinear points.
+	// This algorithm runs in O(n log n) time.
+	this.makeHull = function(points) {
+		var newPoints = points.slice();
+		newPoints.sort(this.POINT_COMPARATOR);
+		return this.makeHullPresorted(newPoints);
+	};
+	
+	
+	// Returns the convex hull, assuming that each points[i] <= points[i + 1]. Runs in O(n) time.
+	this.makeHullPresorted = function(points) {
+		if (points.length <= 1)
+			return points.slice();
+		
+		// Andrew's monotone chain algorithm. Positive y coordinates correspond to "up"
+		// as per the mathematical convention, instead of "down" as per the computer
+		// graphics convention. This doesn't affect the correctness of the result.
+		
+		var upperHull = [];
+		for (var i = 0; i < points.length; i++) {
+			var p = points[i];
+			while (upperHull.length >= 2) {
+				var q = upperHull[upperHull.length - 1];
+				var r = upperHull[upperHull.length - 2];
+				if ((q.x - r.x) * (p.y - r.y) >= (q.y - r.y) * (p.x - r.x))
+					upperHull.pop();
+				else
+					break;
+			}
+			upperHull.push(p);
+		}
+		upperHull.pop();
+		
+		var lowerHull = [];
+		for (var i = points.length - 1; i >= 0; i--) {
+			var p = points[i];
+			while (lowerHull.length >= 2) {
+				var q = lowerHull[lowerHull.length - 1];
+				var r = lowerHull[lowerHull.length - 2];
+				if ((q.x - r.x) * (p.y - r.y) >= (q.y - r.y) * (p.x - r.x))
+					lowerHull.pop();
+				else
+					break;
+			}
+			lowerHull.push(p);
+		}
+		lowerHull.pop();
+		
+		if (upperHull.length == 1 && lowerHull.length == 1 && upperHull[0].x == lowerHull[0].x && upperHull[0].y == lowerHull[0].y)
+			return upperHull;
+		else
+			return upperHull.concat(lowerHull);
+	};
+	
+	
+	this.POINT_COMPARATOR = function(a, b) {
+		if (a.x < b.x)
+			return -1;
+		else if (a.x > b.x)
+			return +1;
+		else if (a.y < b.y)
+			return -1;
+		else if (a.y > b.y)
+			return +1;
+		else
+			return 0;
+	};
+	
+};
+
+
 
 
 function updateResults() {
@@ -428,6 +532,8 @@ function updateResults() {
     mybudget = $('#inpBudget').val();
 
     var optimal = optimal_designs(parseInt(mybudget) * 1000);
+    console.log(optimal);
+
 
     var ess = mybudget * myslope + myintercept;
 
@@ -446,29 +552,68 @@ function updateResults() {
     //}
     //$("#results").append('<p>Effective Sample Size (ESS): '+Plotly.d3.format(",.r")(ess.toFixed(0))+'</p>');
 
-
+    var points = [];
     var inds = [];
     var cells = [];
-    for (const ii in optimal) {
-        inds.push(parseInt(ii));
-        cells.push(parseInt(optimal[ii]));
+    var pools = [];
+    var coverages = []; // reads per cell
+    var hovers = [];
+    for (i = 0; i < optimal.length; i ++) {
+        inds.push(optimal[i][0]);
+        cells.push(optimal[i][1]);
+        points.push({x: optimal[i][0], y: optimal[i][1]});
+        pools.push(optimal[i][2]);
+        coverages.push(optimal[i][3] * 1000);
+        hovers.push(sprintf("Reads per cell: %s<br>Number of pools: %s", formatNumber(optimal[i][3] * 1000), optimal[i][2]));
     }
+
+    console.log(inds);
+    console.log(cells);
+    console.log(pools);
+    console.log(coverages);
+    console.log(points);
+    console.log("GHGHGHGHGHG");
+
+    var hull = convexhull.makeHull(points);
+    var hullx = [];
+    var hully = [];
+    for (i = 0; i < hull.length; i ++) {
+        hullx.push(hull[i].x);
+        hully.push(hull[i].y);
+    }
+    hullx.push(hull[0].x);
+    hully.push(hull[0].y);
 
     var trace11 = {
         x: inds,
         y: cells,
-        mode: 'markers+lines',
+        text: hovers,
+        mode: 'markers',
         type: 'scatter',
         marker: {size: 15},
-        line: {dash: "dashdot"}
+        hovertemplate:
+            "<b>%{text}</b><br><br>" +
+            "%{yaxis.title.text}: %{y:,.0f}<br>" +
+            "%{xaxis.title.text}: %{x:,.0f}<br>" +
+            "<extra></extra>"
     };
+
+    trace22 = {
+        x: hullx,
+        y: hully,
+        mode: 'lines',
+        line: {dash: "dashdot", color: "blue", width: 1}
+    }
+
     var maxind = Math.max.apply(null, inds) + 10;
     var minind = Math.min.apply(null, inds) - 10;
     var maxcell = Math.max.apply(null, cells) + 300;
     var mincell = Math.min.apply(null, cells) - 300;
 
-    data = [trace11];
+    data = [trace11, trace22];
     var layout = {
+        showlegend: false,
+        hovermode: "closest",
         xaxis: {
         tickwidth: 4,
         ticklen: 8,
@@ -556,6 +701,5 @@ $("input").keyup(lazyUpdate);
 updateResults();
 
 </script>
-
 
 
