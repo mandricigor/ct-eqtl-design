@@ -527,21 +527,5 @@ $("input").keyup(lazyUpdate);
 
 updateResults();
 
-function showCat() {$("#cat").show(); $("#plot").hide();};
-function hideCat() {$("#cat").hide(); $("#plot").show();};
-var catMode = 0;
-var originalBg;
-$("body").dblclick(function() {
-	if (catMode === 0) originalBg = $("body").css('background');
-	catMode += 1;
-	if (catMode === 1) $("#catImg").attr("src","img/cats_13HBDT4QSTpveU.gif").attr("height","400");
-	if (catMode === 2) $("#catImg").attr("src","img/cats_xT9IgsUiocA0Gw8M36.gif").attr("height","400");
-	if (catMode === 3) $("#catImg").attr("src","img/cats_3o85xoi6nNqJQJ95Qc.gif").attr("height","400");
-	if (catMode === 4) $("#catImg").attr("src","img/cats_I4wkGBYGkTNHa.gif").attr("height","400");
-    if (catMode === 5) catMode = 0; 
-    if (catMode > 0) $("body").css('background', 'url("img/cats_tile_gray2_400.gif")');
-    else $("body").css('background', originalBg);
-});
-
 </script>
 
