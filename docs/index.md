@@ -5,8 +5,6 @@
 
 
 
-
-
 <head>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -56,7 +54,6 @@
 <div style="width:689px;height:350px;">
 <div id="cat" style="width:689px;height:350px;position:absolute;display:flex;flex-direction:column;">
 <div style="margin:0 auto;">Calculating results</div>
-<div style="margin:0 auto;"><img id="catImg" src="" height="0"></img></div>
 </div>
 <div id="plot" style="width:689px;height:350px;position:absolute;"></div>
 </div>
@@ -434,54 +431,84 @@ function updateResults() {
     var ess = mybudget * myslope + myintercept;
 
     $("#results").empty();	
-    if (Object.keys(optimal).length > 0) {
-        $("#results").append('<p>We recommend the following experimental designs:</p>');
-        $("#results").append("<ul>");
-        for (const ii in optimal) {
-            $("#results").append("<li>" + ii + " individuals and " + optimal[ii] + " cells per individual</li>");
-        }
-        $("#results").append("</ul>");
-    }
-    else {
-        $("#results").append('<p>Sorry, there was a problem</p>');
-    }
+    //if (1 == 0) {
+    //if (Object.keys(optimal).length > 0) {
+    //    $("#results").append('<p>We recommend the following experimental designs:</p>');
+    //    $("#results").append("<ul>");
+    //    for (const ii in optimal) {
+    //        $("#results").append("<li>" + ii + " individuals and " + optimal[ii] + " cells per individual</li>");
+    //    }
+    //    $("#results").append("</ul>");
+    //}
+    //else {
+    //    $("#results").append('<p>Sorry, there was a problem</p>');
+    //}
     //$("#results").append('<p>Effective Sample Size (ESS): '+Plotly.d3.format(",.r")(ess.toFixed(0))+'</p>');
 
-    var x = [];
-    var y = [];
-    var x2 = [mybudget, mybudget];
-    var y2 = [0 * myslope + myintercept, mybudget * myslope + myintercept];
-	for (var i = 5; i <= 100; i += 1) {
-		x.push(i);
-		y.push(i * myslope + myintercept);
-	}
 
-	// for the plot
-	var c1 = 'rgb(27,158,119)';
-	var c2 = 'rgb(217,95,2)';
-	var layout = {
-		margin: {l: 60, r: 60, b: 60, t: 10, pad: 0},
-		showlegend: false,
-		xaxis: {title: 'Budget ($1,000)', zeroline: false, fixedrange: true},
-		yaxis: {title: 'Effective Sample Size',
-				titlefont: {color: c1},
-    			tickfont: {color: c1},
-    			hoverformat: '.0f',
-    			zeroline: false,
-    			fixedrange: true},
-                annotations: [{x:mybudget, y:ess, xref:"x", yref:"y", text:"ESS:" + ess.toFixed(0), align:"center", bordercolor: '#c7c7c7',borderwidth: 2,bgcolor: '#ff7f0e',opacity: 0.8, arrowcolor: '#636363',arrowwidth: 2,arrowsize: 1,arrowhead: 2, font:{size:20, color:"#ffffff"}}]
-	}
-	var trace1 = {x: x, y: y, line:{color: c1}, name: ''};
-	var trace2 = {x: x2, y: y2, line:{color: c2, width:3, dash: "dot", mode:"lines"}, hoverinfo:"skip"};
-        var trace3 = {x:[mybudget], y: [mybudget * myslope + myintercept], mode: "markers", marker:{color: 'rgb(142, 124, 195)',size:20}, name: "ESS", hoverinfo:"skip"};
-	var plotElem = document.getElementById('plot');
-	Plotly.purge(plotElem);
-	Plotly.plot(plotElem, [trace1, trace2, trace3], layout, {displayModeBar: false});
-	if (catMode > 0 && !$("#cat").is(":visible")) {
-		showCat();
-		setTimeout(hideCat, 1000);
-	}
+    var inds = [];
+    var cells = [];
+    for (const ii in optimal) {
+        inds.push(parseInt(ii));
+        cells.push(parseInt(optimal[ii]));
+    }
+
+    var trace11 = {
+        x: inds,
+        y: cells,
+        mode: 'markers+lines',
+        type: 'scatter',
+        marker: {size: 15},
+        line: {dash: "dashdot"}
+    };
+    var maxind = Math.max.apply(null, inds) + 10;
+    var minind = Math.min.apply(null, inds) - 10;
+    var maxcell = Math.max.apply(null, cells) + 300;
+    var mincell = Math.min.apply(null, cells) - 300;
+
+    data = [trace11];
+    var layout = {
+        xaxis: {
+        tickwidth: 4,
+        ticklen: 8,
+        range: [minind, maxind],
+        tickfont: {
+            size: 20,
+            color: "green"
+        },
+        title: "Individuals",
+        titlefont: {
+            size: 25
+        }
+      },
+      yaxis: {
+        tickwidth: 4,
+        ticklen: 8,
+        range: [mincell, maxcell],
+        tickfont: {
+            size: 13,
+            color: "green"
+        },
+        title: "Cells",
+        titlefont: {
+            size: 25
+        }
+      },
+      title: {
+          text: sprintf('Optimal Efective Sample Size: %s', Math.round(ess, 0)),
+          font: {
+              size: 24
+          }
+      }
+    };
+    //Plotly.newPlot('results', data, layout);
+    var plotElem = document.getElementById('plot');
+    Plotly.purge(plotElem);
+    Plotly.plot(plotElem, data, layout, {displayModeBar: false});
 }
+
+
+
 
 $("#inputTable").find("td").css("padding", "12px");
 
@@ -528,4 +555,6 @@ $("input").keyup(lazyUpdate);
 updateResults();
 
 </script>
+
+
 
