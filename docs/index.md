@@ -82,7 +82,7 @@
 <script>
 // min, max, step, default
 //var sampleSizeRange = [10, 1000, 1, 60];
-var budgetRange = [5, 100, 1, 15];
+var budgetRange = [10, 100, 1, 15];
 
 var slopes = {"CD14+ Monocytes": 1.556, "CD4 T cells": 1.549, "B cells": 1.197, "CD8 T cells": 1.196, "NK cells": 1.239, "Megakaryocytes": 1.273, "FCGR3A+ cells": 1.304, "Dendritic cells": 1.180};
 var intercepts = {"CD14+ Monocytes": 4.846, "CD4 T cells": 5.074, "B cells": 4.645, "CD8 T cells": 1.623, "NK cells": 2.763, "Megakaryocytes": 1.103, "FCGR3A+ cells": 3.614, "Dendritic cells": 2.875};
