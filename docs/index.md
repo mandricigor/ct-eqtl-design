@@ -395,9 +395,9 @@ function exp_design_fixed_lane_capacity(budget, lo_cell, hi_cell, lo_p, hi_p, di
 
 
 function optimal_designs(budget) {
-    var lowCell = 500;
-    var highCell = 2750;
-    var lowInd = 5;
+    var lowCell = 100;
+    var highCell = 10000;
+    var lowInd = 10;
     var highInd = 1000;
     var uu = exp_design_fixed_lane_capacity(budget, lowCell, highCell, lowInd, highInd);
     good_ind = {};
