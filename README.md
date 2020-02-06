@@ -20,9 +20,17 @@ single-cell RNA sequencing experiments for cell-type-specific eQTL analysis.
   - [1. Load and hygienize dataset](#1-load-and-hygienize-dataset)
   - [2. Knowledge-based identification of all cell
     populations](#2-knowledge-based-identification-of-all-cell-populations)
-  - [3. Population size dynamics](#3-population-size-dynamics)
-  - [4. Combinatorial DE tests](#4-combinatorial-de-tests)
-  - [5. Neuronal populations
-    clustering](#5-neuronal-populations-clustering)
-  - [6. Neurogenesis dynamics](#6-neurogenesis-dynamics)
-  - [7. Export annotations](#7-export-annotations)
+
+# 
+
+## Data availability
+
+# 
+
+Those interested in processing the datasets independently should consider
+downloading:
+
+  - the [Smart-Seq2 dataset](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5061/)
+    from Segerstolpe et al., 2016.  
+  - the [Census of Immune Cells](https://data.humancellatlas.org/explore/projects/cc95ff89-2e68-4a08-a234-480eca21ce79). We analyzed only a subset of it (Lane 7).
+  - the [10X dataset](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137029)
