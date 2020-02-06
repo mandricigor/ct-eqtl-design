@@ -1,3 +1,5 @@
 
-ct-eqtl design
+This repository contains the R code used to analyse the single-cell RNA-seq dataset shown in:
 
+Mandric, Igor, et al. "Optimal design of single-cell RNA sequencing experiments for cell-type-specific eQTL analysis." bioRxiv (2019): 766972.
+https://doi.org/10.1101/766972 
