@@ -2,7 +2,7 @@
 
 <p align="center">
 
-<img src="./figures/figure_s14.png" width="100%">
+<img src="./figures/figure_s14.png" width="50%">
 
 </p>
 
