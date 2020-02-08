@@ -27,8 +27,7 @@ single-cell RNA sequencing experiments for cell-type-specific eQTL analysis.
 
 # 
 
-Those interested in processing the datasets independently should consider
-downloading:
+If you want to analyze the datasets used in the paper, you can access them independently:
 
   - the [Smart-Seq2 dataset](https://www.ebi.ac.uk/arrayexpress/experiments/E-MTAB-5061/)
     from Segerstolpe et al., 2016.  
