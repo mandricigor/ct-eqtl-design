@@ -17,7 +17,6 @@ single-cell RNA sequencing experiments for cell-type-specific eQTL analysis.
   - [Data availability](#data-availability)
   - [Figures](#figures)
   - [Figure captions](#figure-captions)
-  - [Scripts](#scripts)
 
 ## Data availability
 
@@ -37,7 +36,7 @@ If you want to analyze the datasets used in the paper, you can access them indep
 |                               Figure 1                               |                              Figure 2                              |                     Figure 3                     |                Figure 4                 |
 | :------------------------------------------------------------------: | :----------------------------------------------------------------: | :----------------------------------------------: | :-------------------------------------: |
 |                    ![](./figures/Figure-1.png)                    |                   ![](./figures/Figure-2.png)                   |          ![](./figures/Figure-3.png)          |     ![](./figures/Figure-4.png)      |
-| [Caption](#caption-figure-1)  | [Caption](#caption-figure-2) | [Caption](#caption-figure-3) | [Caption](#caption-figure-4) |
+| [Caption](#caption-figure-1), [Script](./plots/figure1.R)  | [Caption](#caption-figure-2) | [Caption](#caption-figure-3) | [Caption](#caption-figure-4) |
 
 |            Figure 5            |            Figure 6            |                                           Figure 7                                            |                                             Figure S1                                             |
 | :----------------------------: | :----------------------------: | :-------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------: |
