@@ -15,13 +15,7 @@ single-cell RNA sequencing experiments for cell-type-specific eQTL analysis.
 <https://doi.org/10.1101/766972>*
 
   - [Data availability](#data-availability)
-  - [Figure shortcuts](#figure-shortcuts)
-  - [Analysis preliminaries](#analysis-preliminaries)
-  - [1. Load and hygienize dataset](#1-load-and-hygienize-dataset)
-  - [2. Knowledge-based identification of all cell
-    populations](#2-knowledge-based-identification-of-all-cell-populations)
-
-# 
+  - [Figures](#figure-shortcuts)
 
 ## Data availability
 
@@ -34,6 +28,7 @@ If you want to analyze the datasets used in the paper, you can access them indep
   - the [10X dataset](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE137029)
 
 
+## Figures
 
 
 
