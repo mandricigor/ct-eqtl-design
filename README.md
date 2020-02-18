@@ -39,29 +39,29 @@ If you want to analyze the datasets used in the paper, you can access them indep
 |                    ![](./figures/Figure-1.png)                    |                   ![](./figures/Figure-2.png)                   |          ![](./figures/Figure-3.png)          |     ![](./figures/Figure-4.png)      |
 | [Caption](#caption-figure-1), [Script](./plots/figure1.R)  | [Caption](#caption-figure-2), [Script](./plots/figure2.R) | [Caption](#caption-figure-3), [Script](./plots/figure3.R) | [Caption](#caption-figure-4) |
 
-|            Figure 5            |            Figure 6            |                                           Figure 7                                            |                                             Figure S1                                             |
+|            Figure 5            |            Figure S1            |                                           Figure S2                                            |                                             Figure S3                                             |
 | :----------------------------: | :----------------------------: | :-------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------: |
 | ![](./figures/Figure-5.png) | ![](./figures/Figure-S1.png) |                                ![](./figures/Figure-S2.png)                                 |                                  ![](./figures/Figure-S3.png)                                  |
 | [Caption](#caption-figure-5)  | [Caption](#caption-figure-s1) | [Caption](#caption-figure-s2), [Script](./plots/allplots.R) | [Caption](#caption-figure-s3) |
 
-|               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
+|               Figure S4                |             Figure S5              |                 Figure S6                 |                                          Figure S7                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
 |    ![](./figures/Figure-S4.jpg)     |  ![](./figures/Figure-S5.jpg)   |      ![](./figures/Figure-S6.jpg)      |                               ![](./figures/Figure-S7.jpg)                                |
 | [Caption](#caption-figure-s4)  | [Caption](#caption-figure-s5) | [Caption](#caption-figure-s6) | [Caption](#caption-figure-s7) |
 
-|               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
+|               Figure S8                |             Figure S9              |                 Figure S10                 |                                          Figure S11                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
 |    ![](./figures/Figure-S8.png)     |  ![](./figures/Figure-S9.png)   |      ![](./figures/Figure-S10.png)      |                               ![](./figures/Figure-S11.png)                                |
 | [Caption](#caption-figure-s8)  | [Caption](#caption-figure-s9) | [Caption](#caption-figure-s10) | [Caption](#caption-figure-s11) |
 
 
-|               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
+|               Figure S12                |             Figure S13              |                 Figure S14                 |                                          Figure S15                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
 |    ![](./figures/Figure-S12.png)     |  ![](./figures/Figure-S13.png)   |      ![](./figures/Figure-S14.png)      |                               ![](./figures/Figure-S15.png)                                |
 | [Caption](#caption-figure-s12)  | [Caption](#caption-figure-s13) | [Caption](#caption-figure-s14) | [Caption](#caption-figure-s15) |
 
 
-|               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
+|               Figure S16                |             Figure S17              |                 Figure S18                 |                                          Figure S19                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
 |    ![](./figures/Figure-S16.png)     |  ![](./figures/Figure-S17.png)   |      ![](./figures/Figure-S18.png)      |                               ![](./figures/Figure-S19.png)                                |
 | [Caption](#caption-figure-s16)  | [Caption](#caption-figure-s17) | [Caption](#caption-figure-s18) | [Caption](#caption-figure-s19) |
