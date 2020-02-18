@@ -16,6 +16,8 @@ single-cell RNA sequencing experiments for cell-type-specific eQTL analysis.
 
   - [Data availability](#data-availability)
   - [Figures](#figures)
+  - [Figure captions](#figure-captions)
+  - [Scripts](#scripts)
 
 ## Data availability
 
@@ -35,31 +37,41 @@ If you want to analyze the datasets used in the paper, you can access them indep
 |                               Figure 1                               |                              Figure 2                              |                     Figure 3                     |                Figure 4                 |
 | :------------------------------------------------------------------: | :----------------------------------------------------------------: | :----------------------------------------------: | :-------------------------------------: |
 |                    ![](./figures/Figure-1.png)                    |                   ![](./figures/Figure-2.png)                   |          ![](./figures/Figure-3.png)          |     ![](./figures/Figure-4.png)      |
-| [B](#step-1-map) [C](#tsne-plots) [D-E](#progenitor-and-neuron-maps) | [A-D](#population-ratio-dynamics) [E](#population-size-comparison) | [A](#gene-categories-highlights) [B](#claudin-3) | [A](#5-neuronal-populations-clustering) |
+| [Caption](#caption-figure-1)  | [Caption](#caption-figure-2) | [Caption](#caption-figure-3) | [Caption](#caption-figure-4) |
 
 |            Figure 5            |            Figure 6            |                                           Figure 7                                            |                                             Figure S1                                             |
 | :----------------------------: | :----------------------------: | :-------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------: |
 | ![](./figures/Figure-5.png) | ![](./figures/Figure-S1.png) |                                ![](./figures/Figure-S2.png)                                 |                                  ![](./figures/Figure-S3.png)                                  |
-| [A](#gene-levels-per-subtypes) |    [A](#neurogenesis-waves)    | [A-B](#differentiation-plane) [C](#plot-neurogenesis-pattern) [D](#genes-profiles-per-domain) | [A-C](#1-load-and-hygienize-dataset) [D](#doublet-estimation) [E-F](#tsne-plots) [G](#step-2-map) |
+| [Caption](#caption-figure-1)  | [Caption](#caption-figure-2) | [Caption](#caption-figure-3) | [Caption](#caption-figure-4) |
 
 |               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
 |    ![](./figures/Figure-S4.jpg)     |  ![](./figures/Figure-S5.jpg)   |      ![](./figures/Figure-S6.jpg)      |                               ![](./figures/Figure-S7.jpg)                                |
-| [A](#progenitor-patterning-prediction) | [A](#neuron-patterning-prediction) | [A-H](#5-neuronal-populations-clustering) | [A](#identify-gliogenic-and-neurogenic-pan-domain-modules) [B-D](#genes-profiles-per-domain) |
+| [Caption](#caption-figure-1)  | [Caption](#caption-figure-2) | [Caption](#caption-figure-3) | [Caption](#caption-figure-4) |
 
 |               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
 |    ![](./figures/Figure-S8.png)     |  ![](./figures/Figure-S9.png)   |      ![](./figures/Figure-S10.png)      |                               ![](./figures/Figure-S11.png)                                |
-| [A](#progenitor-patterning-prediction) | [A](#neuron-patterning-prediction) | [A-H](#5-neuronal-populations-clustering) | [A](#identify-gliogenic-and-neurogenic-pan-domain-modules) [B-D](#genes-profiles-per-domain) |
+| [Caption](#caption-figure-1)  | [Caption](#caption-figure-2) | [Caption](#caption-figure-3) | [Caption](#caption-figure-4) |
 
 
 |               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
 |    ![](./figures/Figure-S12.png)     |  ![](./figures/Figure-S13.png)   |      ![](./figures/Figure-S14.png)      |                               ![](./figures/Figure-S15.png)                                |
-| [A](#progenitor-patterning-prediction) | [A](#neuron-patterning-prediction) | [A-H](#5-neuronal-populations-clustering) | [A](#identify-gliogenic-and-neurogenic-pan-domain-modules) [B-D](#genes-profiles-per-domain) |
+| [Caption](#caption-figure-1)  | [Caption](#caption-figure-2) | [Caption](#caption-figure-3) | [Caption](#caption-figure-4) |
 
 
 |               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
 |    ![](./figures/Figure-S16.png)     |  ![](./figures/Figure-S17.png)   |      ![](./figures/Figure-S18.png)      |                               ![](./figures/Figure-S19.png)                                |
-| [A](#progenitor-patterning-prediction) | [A](#neuron-patterning-prediction) | [A-H](#5-neuronal-populations-clustering) | [A](#identify-gliogenic-and-neurogenic-pan-domain-modules) [B-D](#genes-profiles-per-domain) |
+| [Caption](#caption-figure-1)  | [Caption](#caption-figure-2) | [Caption](#caption-figure-3) | [Caption](#caption-figure-4) |
+
+
+
+## Figure captions
+
+
+
+
+## Scripts
+
