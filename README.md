@@ -50,7 +50,7 @@ If you want to analyze the datasets used in the paper, you can access them indep
 
 |               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
-|    ![](./figures/Figure-S4.png)     |  ![](./figures/Figure-S5.png)   |      ![](./figures/Figure-S6.png)      |                               ![](./figures/Figure-S7.png)                                |
+|    ![](./figures/Figure-S4.jpg)     |  ![](./figures/Figure-S5.jpg)   |      ![](./figures/Figure-S6.jpg)      |                               ![](./figures/Figure-S7.jpg)                                |
 | [A](#progenitor-patterning-prediction) | [A](#neuron-patterning-prediction) | [A-H](#5-neuronal-populations-clustering) | [A](#identify-gliogenic-and-neurogenic-pan-domain-modules) [B-D](#genes-profiles-per-domain) |
 
 |               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
