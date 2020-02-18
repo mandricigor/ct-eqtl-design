@@ -17,7 +17,7 @@ single-cell RNA sequencing experiments for cell-type-specific eQTL analysis.
   - [Data availability](#data-availability)
   - [Figures](#figures)
   - [Figure captions](#figure-captions)
-  - [ct-eQTL design calculator](ct-eqtl-design-calculator)
+  - [ct-eQTL design calculator](#ct-eqtl-design-calculator)
 
 ## Data availability
 
