@@ -25,7 +25,6 @@ single-cell RNA sequencing experiments for cell-type-specific eQTL analysis.
 
 ## Data availability
 
-# 
 
 If you want to analyze the datasets used in the paper, you can access them independently:
 
