@@ -45,10 +45,10 @@ If you want to analyze the datasets used in the paper, you can access them indep
 
 |            Figure 5            |            Figure 6            |                                           Figure 7                                            |                                             Figure S1                                             |
 | :----------------------------: | :----------------------------: | :-------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------: |
-| ![](./figures/Figure-5.png) | ![](./suppl_files/Figure6.png) |                                ![](./suppl_files/Figure7.png)                                 |                                  ![](./suppl_files/FigureS1.png)                                  |
+| ![](./figures/Figure-5.png) | ![](./figures/Figure-S1.png) |                                ![](./figures/Figure-S2.png)                                 |                                  ![](./figures/Figure-S3.png)                                  |
 | [A](#gene-levels-per-subtypes) |    [A](#neurogenesis-waves)    | [A-B](#differentiation-plane) [C](#plot-neurogenesis-pattern) [D](#genes-profiles-per-domain) | [A-C](#1-load-and-hygienize-dataset) [D](#doublet-estimation) [E-F](#tsne-plots) [G](#step-2-map) |
 
 |               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
-|    ![](./suppl_files/FigureS2.png)     |  ![](./suppl_files/FigureS3.png)   |      ![](./suppl_files/FigureS4.png)      |                               ![](./suppl_files/FigureS6.png)                                |
+|    ![](./figures/Figure-S4.png)     |  ![](./figures/Figure-S5.png)   |      ![](./figures/Figure-S6.png)      |                               ![](./figures/Figure-S7.png)                                |
 | [A](#progenitor-patterning-prediction) | [A](#neuron-patterning-prediction) | [A-H](#5-neuronal-populations-clustering) | [A](#identify-gliogenic-and-neurogenic-pan-domain-modules) [B-D](#genes-profiles-per-domain) |
