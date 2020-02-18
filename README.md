@@ -73,11 +73,8 @@ If you want to analyze the datasets used in the paper, you can access them indep
 | <center> <h5 id="caption-figure-1">Caption Figure 1</h5> </center> |
 | :------------------------------------: |
 | The impact of read coverage on the average R2 between cell-type-specific gene expression estimates and their ground truth values (Smart-Seq2 dataset, alpha cells).  A) Average Pearson R2 (± 1 standard error) computed across all the genes at different levels of read coverage, Smart-Seq2 dataset. B) Pearson R2 at 75,000 reads per cell (± 1 standard error) stratified by the expression level, Smart-Seq2 dataset. C) Average Pearson R2 (± 1 standard error) computed across all the genes at different levels of read coverage, 10X dataset. D) Pearson R2 at 4,000 reads per cell (± 1 standard error) stratified by the expression level, Smart-Seq2 dataset. |
-| :------------------------------------: |
 | <center> <h5 id="caption-figure-2">Caption Figure 2</h5> </center> |
-| :------------------------------------: |
 | The impact of read coverage on the accuracy of demultiplexing.  Shown here is the percentage of correctly assigned cells (to the corresponding sample) as a function of average number of reads per cell. |
-| :------------------------------------: |
 | <center> <h5 id="caption-figure-3">Caption Figure 3</h5> </center> |
 | Experimental designs for CD4 T cells ct-eQTL with effective sample size Neff=40: A) Comparison of different experimental designs. Experimental design N=88, M=2,250, r=4,500 yields two-fold reduction in cost than the standard design. B) For a fixed sample size and number of cells per individual, increasing coverage implies increasing the effective sample size (i.e., power) only up to a point. There is little gain in power at coverages greater than 12,500 reads per cell. |
 | <center> <h5 id="caption-figure-4">Caption Figure 4</h5> </center> |
