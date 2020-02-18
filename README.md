@@ -70,7 +70,7 @@ If you want to analyze the datasets used in the paper, you can access them indep
 
 ## Figure captions
 
-### Caption Figure 1 
+| <center> <h3 id="caption-figure-1">Caption Figure 1</h3> </center> |
 | :------------------------------------: |
 | The impact of read coverage on the average R2 between cell-type-specific gene expression estimates and their ground truth values (Smart-Seq2 dataset, alpha cells).  A) Average Pearson R2 (± 1 standard error) computed across all the genes at different levels of read coverage, Smart-Seq2 dataset. B) Pearson R2 at 75,000 reads per cell (± 1 standard error) stratified by the expression level, Smart-Seq2 dataset. C) Average Pearson R2 (± 1 standard error) computed across all the genes at different levels of read coverage, 10X dataset. D) Pearson R2 at 4,000 reads per cell (± 1 standard error) stratified by the expression level, Smart-Seq2 dataset. |
 
