@@ -36,12 +36,12 @@ If you want to analyze the datasets used in the paper, you can access them indep
 |                               Figure 1                               |                              Figure 2                              |                     Figure 3                     |                Figure 4                 |
 | :------------------------------------------------------------------: | :----------------------------------------------------------------: | :----------------------------------------------: | :-------------------------------------: |
 |                    ![](./figures/Figure-1.png)                    |                   ![](./figures/Figure-2.png)                   |          ![](./figures/Figure-3.png)          |     ![](./figures/Figure-4.png)      |
-| [Caption](#caption-figure-1), [Script](./plots/figure1.R)  | [Caption](#caption-figure-2) | [Caption](#caption-figure-3) | [Caption](#caption-figure-4) |
+| [Caption](#caption-figure-1), [Script](./plots/figure1.R)  | [Caption](#caption-figure-2), [Script](./plots/figure2.R) | [Caption](#caption-figure-3), [Script](./plots/figure3.R) | [Caption](#caption-figure-4) |
 
 |            Figure 5            |            Figure 6            |                                           Figure 7                                            |                                             Figure S1                                             |
 | :----------------------------: | :----------------------------: | :-------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------: |
 | ![](./figures/Figure-5.png) | ![](./figures/Figure-S1.png) |                                ![](./figures/Figure-S2.png)                                 |                                  ![](./figures/Figure-S3.png)                                  |
-| [Caption](#caption-figure-5)  | [Caption](#caption-figure-s1) | [Caption](#caption-figure-s2) | [Caption](#caption-figure-s3) |
+| [Caption](#caption-figure-5)  | [Caption](#caption-figure-s1) | [Caption](#caption-figure-s2), [Script](./plots/allplots.R) | [Caption](#caption-figure-s3) |
 
 |               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
@@ -50,7 +50,7 @@ If you want to analyze the datasets used in the paper, you can access them indep
 
 |               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
-|    ![](./figures/Figure-S8.png)     |  ![](./figures/Figure-S9.png)   |      ![](./figures/Figure-S10.png)      |                               ![](./figures/Figure-S11.png)                                |
+|    ![](./figures/Figure-S8.png)     |  ![](./figures/Figure-S9.png), [Script](./plots/ess.heatmap.R)   |      ![](./figures/Figure-S10.png)      |                               ![](./figures/Figure-S11.png)                                |
 | [Caption](#caption-figure-s8)  | [Caption](#caption-figure-s9) | [Caption](#caption-figure-s10) | [Caption](#caption-figure-s11) |
 
 
