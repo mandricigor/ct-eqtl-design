@@ -51,7 +51,7 @@ If you want to analyze the datasets used in the paper, you can access them indep
 
 |               Figure S2                |             Figure S3              |                 Figure S4                 |                                          Figure S6                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
-|    ![](./figures/Figure-S8.png)     |  ![](./figures/Figure-S9.png), [Script](./plots/ess.heatmap.R)   |      ![](./figures/Figure-S10.png)      |                               ![](./figures/Figure-S11.png)                                |
+|    ![](./figures/Figure-S8.png)     |  ![](./figures/Figure-S9.png)   |      ![](./figures/Figure-S10.png)      |                               ![](./figures/Figure-S11.png)                                |
 | [Caption](#caption-figure-s8)  | [Caption](#caption-figure-s9) | [Caption](#caption-figure-s10) | [Caption](#caption-figure-s11) |
 
 
