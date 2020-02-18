@@ -15,7 +15,7 @@ single-cell RNA sequencing experiments for cell-type-specific eQTL analysis.
 <https://doi.org/10.1101/766972>*
 
   - [Data availability](#data-availability)
-  - [Figures](#figure-shortcuts)
+  - [Figures](#figures)
 
 ## Data availability
 
