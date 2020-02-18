@@ -17,6 +17,7 @@ single-cell RNA sequencing experiments for cell-type-specific eQTL analysis.
   - [Data availability](#data-availability)
   - [Figures](#figures)
   - [Figure captions](#figure-captions)
+  - [ct-eQTL design calculator](ct-eqtl-design-calculator)
 
 ## Data availability
 
@@ -122,7 +123,9 @@ If you want to analyze the datasets used in the paper, you can access them indep
 | cell type composition of the 10X dataset. |
 
 
+# ct-eQTL design calculator
 
+The calculator for the design of single-cell RNA-Seq experiments for cell-type-specific eQTL studies is available [HERE](https://mandricigor.github.io/ct-eqtl-design/).
 
 
 
