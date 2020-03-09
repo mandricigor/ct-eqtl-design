@@ -644,7 +644,7 @@ function updateResults() {
         }
       },
       title: {
-          text: sprintf('Optimal Efective Sample Size: %s', Math.round(ess, 0)),
+          text: sprintf('Optimal Effective Sample Size: %s', Math.round(ess, 0)),
           font: {
               size: 24
           }
