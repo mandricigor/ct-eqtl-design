@@ -40,7 +40,7 @@
 			<div id="sliderBudget"></div><input type="text" id="inpBudget" value="55" />
 		</td>
 		<td style="width:33%;">
-			Sequencing cost
+			Sequencing cost (per 1M reads)
 			<div id="dropSeqCost"></div>
 				<select name="seqcost" id="seqcost">
 					<option>1 $</option>
@@ -111,18 +111,21 @@ var budgetRange = [10, 100, 1, 55];
 
 var slopes = {"CD14+ Monocytes": 1.556, "CD4 T cells": 1.549, "B cells": 1.197, "CD8 T cells": 1.196, "NK cells": 1.239, "Megakaryocytes": 1.273, "FCGR3A+ cells": 1.304, "Dendritic cells": 1.180};
 var intercepts = {"CD14+ Monocytes": 4.846, "CD4 T cells": 5.074, "B cells": 4.645, "CD8 T cells": 1.623, "NK cells": 2.763, "Megakaryocytes": 1.103, "FCGR3A+ cells": 3.614, "Dendritic cells": 2.875};
-
+var lows = {"1 $": 15000, "2 $": 12500, "3 $": 10500, "4 $": 9500, "5 $": 7500}
+var highs = {"1 $": 20000, "2 $": 17500, "3 $": 15500, "4 $": 14500, "5 $": 12500}
 
 $("#cat").hide(0);
 
 $("#inpBudget").val(budgetRange[3]);
 //$("#inpSampleSize").val(sampleSizeRange[3]);
 $("#celltype :selected").val("NK cells");
+$("#seqcost :selected").val("5 $");
 
 function loadPreset(values) {
 	$("#inpBudget").val(values[0]);
 	$("#inpSampleSize").val(values[1]);
         $('#celltype').val(values[2]);
+	$('#seqcost').val(values[3]);
 	updateResults();
 }
 
@@ -140,6 +143,7 @@ function syncInput() {
 	checkInput(budgetRange, "#inpBudget", "#sliderBudget");
 	//checkInput(sampleSizeRange, "#inpSampleSize", "#sliderSampleSize");
         $("#celltype").selectmenu("refresh");
+	$("#seqcost").selectmenu("refresh");
 }
 
 
@@ -696,7 +700,7 @@ $("#sliderBudget").slider({
 //});
 
 
-$("#buttonPreset1").button({label: 'Load preset'}).click(function() {loadPreset([35, 60, "B cells"]);});
+$("#buttonPreset1").button({label: 'Load preset'}).click(function() {loadPreset([35, 60, "B cells", "5 $"]);});
 
 
 $("#moreDetails").button({label: 'More detail'});
