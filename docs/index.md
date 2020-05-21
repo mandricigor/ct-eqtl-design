@@ -554,6 +554,8 @@ function updateResults() {
     var optimal = optimal_designs(parseInt(mybudget) * 1000, lows[myseqcost], highs[myseqcost]);
     console.log(optimal);
 
+    console.log("AAAA");
+    console.log(magnitude[myseqcost]);
 
     var ess = (mybudget * myslope + myintercept) * magnitude[myseqcost];
 
