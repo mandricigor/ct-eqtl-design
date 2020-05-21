@@ -690,6 +690,11 @@ $("#sliderBudget").slider({
 	stop: function(event, ui) {updateResults();},
 });
 
+$("#seqcost").selectmenu({
+	value: $("#seqcost").val(),
+        change: function(event, ui) {updateResults();},
+});
+
 //$("#sliderSampleSize").slider({
 //	value: parseInt($("#inpSampleSize").val()),
 //	min: sampleSizeRange[0],
