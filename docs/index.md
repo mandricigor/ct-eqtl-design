@@ -23,7 +23,7 @@
 	<tr valign="bottom">
 		<td>
                         Cell type
-			<div id="dropCelltype" style="width:250px;"></div>
+			<div id="dropCelltype" style="width:167px;"></div>
     				<select name="celltype" id="celltype">
       					<option selected="selected">CD4 T cells</option>
       					<option>CD14+ Monocytes</option>
@@ -37,7 +37,18 @@
 		</td>
 		<td>
 			Budget ($1,000)
-			<div id="sliderBudget" style="width:250px;"></div><input type="text" id="inpBudget" value="55" />
+			<div id="sliderBudget" style="width:166px;"></div><input type="text" id="inpBudget" value="55" />
+		</td>
+		<td>
+			Sequencing cost
+			<div id="dropSeqCost" style="width:167px;"></div>
+				<select name="seqcost" id="seqcost">
+					<option>1 $</option>
+					<option>2 $</option>
+					<option>3 $</option>
+					<option>4 %</option>
+					<option selected="selected">5 $</option>
+				</select>
 		</td>
 	</tr>
 </table>
