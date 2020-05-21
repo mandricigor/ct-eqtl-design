@@ -16,14 +16,14 @@
 
 <table id="inputTable">
 	<tr>
-		<td colspan="2">
+		<td colspan="3">
 			<p><div id="buttonPreset1"></div> We aim to have a cell-type specific eQTL study (ct-eQTL) for B cells with available budget $35,000. As the optimal coverage at an average sequencing cost of 5$ per 1 million reads is 10,000 reads per cell (<a href="https://www.biorxiv.org/content/10.1101/766972v1">Mandric et al, 2019</a>), what is the sample size and the number of cells we should have per individual? And what will be the effective sample size?</p>
 		</td>
 	</tr>
 	<tr valign="bottom">
 		<td>
                         Cell type
-			<div id="dropCelltype" style="width:167px;"></div>
+			<div id="dropCelltype" style="width:33%;"></div>
     				<select name="celltype" id="celltype">
       					<option selected="selected">CD4 T cells</option>
       					<option>CD14+ Monocytes</option>
@@ -37,16 +37,16 @@
 		</td>
 		<td>
 			Budget ($1,000)
-			<div id="sliderBudget" style="width:166px;"></div><input type="text" id="inpBudget" value="55" />
+			<div id="sliderBudget" style="width:34%;"></div><input type="text" id="inpBudget" value="55" />
 		</td>
 		<td>
 			Sequencing cost
-			<div id="dropSeqCost" style="width:167px;"></div>
+			<div id="dropSeqCost" style="width:33%;"></div>
 				<select name="seqcost" id="seqcost">
 					<option>1 $</option>
 					<option>2 $</option>
 					<option>3 $</option>
-					<option>4 %</option>
+					<option>4 $</option>
 					<option selected="selected">5 $</option>
 				</select>
 		</td>
