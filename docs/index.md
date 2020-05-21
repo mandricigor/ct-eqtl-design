@@ -111,6 +111,7 @@ var budgetRange = [10, 100, 1, 55];
 
 var slopes = {"CD14+ Monocytes": 1.556, "CD4 T cells": 1.549, "B cells": 1.197, "CD8 T cells": 1.196, "NK cells": 1.239, "Megakaryocytes": 1.273, "FCGR3A+ cells": 1.304, "Dendritic cells": 1.180};
 var intercepts = {"CD14+ Monocytes": 4.846, "CD4 T cells": 5.074, "B cells": 4.645, "CD8 T cells": 1.623, "NK cells": 2.763, "Megakaryocytes": 1.103, "FCGR3A+ cells": 3.614, "Dendritic cells": 2.875};
+var magnitude = {"1 $": 1.75, "2 $": 1.5, "3 $": 1.2, "4 $": 1.1, "5 $": 1.0}
 var lows = {"1 $": 15000, "2 $": 12500, "3 $": 10500, "4 $": 9500, "5 $": 7500}
 var highs = {"1 $": 20000, "2 $": 17500, "3 $": 15500, "4 $": 14500, "5 $": 12500}
 
@@ -429,7 +430,7 @@ function exp_design_fixed_lane_capacity(budget, lo_cell, hi_cell, lo_p, hi_p, di
 }
 
 
-function optimal_designs(budget) {
+function optimal_designs(budget, low_cov, high_cov) {
     var lowCell = 500;
     var highCell = 2750;
     var lowInd = 10;
@@ -444,7 +445,7 @@ function optimal_designs(budget) {
         var uarr = uu[u];
         var i;
         for (i = 0; i < uarr.length; i ++) {
-            if ((uarr[i][3] > 7500) && (uarr[i][3] < 12500)) {
+            if ((uarr[i][3] > low_cov) && (uarr[i][3] < high_cov)) {
                 console.log(u, uarr[i]);
                 //if (u in good_ind) {
                 //    if (uarr[i][0] > good_ind[i]) {
@@ -548,12 +549,13 @@ function updateResults() {
     myslope = slopes[$('#celltype :selected').text()];
     myintercept = intercepts[$('#celltype :selected').text()];
     mybudget = $('#inpBudget').val();
+    myseqcost = $('#seqcost').val();
 
-    var optimal = optimal_designs(parseInt(mybudget) * 1000);
+    var optimal = optimal_designs(parseInt(mybudget) * 1000, lows[myseqcost], highs[myseqcost]);
     console.log(optimal);
 
 
-    var ess = mybudget * myslope + myintercept;
+    var ess = (mybudget * myslope + myintercept) * magnitude[myseqcost];
 
     $("#results").empty();	
     //if (1 == 0) {
