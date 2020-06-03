@@ -46,7 +46,7 @@ If you want to analyze the datasets used in the paper, you can access them indep
 
 |               Figure S4                |             Figure S5              |                 Figure S6                 |                                          Figure S7                                           |
 | :------------------------------------: | :--------------------------------: | :---------------------------------------: | :------------------------------------------------------------------------------------------: |
-|    ![](./figures/Figure-S4.jpg)     |  ![](./figures/Figure-S5.jpg)   |      ![](./figures/Figure-S6.jpg)      |                               ![](./figures/Figure-S7.jpg)                                |
+|    ![](./figures/Figure-S4.png)     |  ![](./figures/Figure-S5.png)   |      ![](./figures/Figure-S6.png)      |                               ![](./figures/Figure-S7.png)                                |
 | [Caption](#caption-figure-s4)  | [Caption](#caption-figure-s5) | [Caption](#caption-figure-s6) | [Caption](#caption-figure-s7) |
 
 |               Figure S8                |             Figure S9              |                 Figure S10                 |                                          Figure S11                                           |
