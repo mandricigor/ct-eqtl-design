@@ -2,7 +2,8 @@
 suppressWarnings(suppressMessages(library(tidyverse)))
 
 args <- commandArgs(trailingOnly=TRUE)
-groundDir <- "EQTL_RESULTS/VARIANCE/ground_truth" #args[1]
+#groundDir <- "GROUND_TRUTH_VAR_EQTL/IGOR_120-individuals_3000-cells_cd4_cells.csv/"
+groundDir <- "GROUND_TRUTH_MEAN_EQTL/IGOR_120-individuals_3000-cells_cd4_cells.csv/"
 dataDir <- args[1]
 
 groundName <- tail(strsplit(groundDir, "/")[[1]], n = 1)
@@ -25,14 +26,14 @@ common_eqtls_all <- rep(0, 22)
 
 
 for (chrom in 1:22) {    
-    ground <- read.table(sprintf("%s/chr%s.txt", groundDir, chrom), header=T)
+    ground <- read.table(sprintf("%s/chromosome.%s", groundDir, chrom), header=T)
     ground <- ground[ground$FDR < 0.05,]
     ground <- ground %>% unite("eqtl", c("SNP", "gene"), remove=F)
 
     ground_egenes <- unique(ground$gene)
     ground_eqtls <- unique(ground$eqtl)
 
-    data <- read.table(sprintf("%s/chr%s.txt", dataDir, chrom), header=T)
+    data <- read.table(sprintf("%s/chromosome.%s", dataDir, chrom), header=T)
     data <- data[data$FDR < 0.05,]
     data <- data %>% unite("eqtl", c("SNP", "gene"), remove=F)
 
@@ -54,6 +55,11 @@ data_egenes_all <- sum(data_egenes_all)
 data_eqtls_all <- sum(data_eqtls_all)
 common_egenes_all <- sum(common_egenes_all)
 common_eqtls_all <- sum(common_eqtls_all)
+
+#ground_eqtls_all
+#ground_egenes_all
+#data_eqtls_all
+#data_egenes_all
 
 eqtl_sens <- common_eqtls_all / ground_eqtls_all
 eqtl_ppv <- common_eqtls_all / data_eqtls_all
